@@ -14,6 +14,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import Link from "next/link";
 import { useState } from "react";
+import { ShamiriLogo } from "@/components/shamiri-logo";
 
 export function ForgotPasswordForm({
   className,
@@ -46,6 +47,9 @@ export function ForgotPasswordForm({
 
   return (
     <div className={cn("flex flex-col gap-6", className)} {...props}>
+      <div className="flex justify-center mb-2">
+        <ShamiriLogo />
+      </div>
       {success ? (
         <Card>
           <CardHeader>

@@ -15,6 +15,7 @@ import { Label } from "@/components/ui/label";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
+import { ShamiriLogo } from "@/components/shamiri-logo";
 
 export function LoginForm({
   className,
@@ -38,8 +39,7 @@ export function LoginForm({
         password,
       });
       if (error) throw error;
-      // Update this route to redirect to an authenticated route. The user already has an active session.
-      router.push("/protected");
+      router.push("/dashboard");
     } catch (error: unknown) {
       setError(error instanceof Error ? error.message : "An error occurred");
     } finally {
@@ -49,6 +49,9 @@ export function LoginForm({
 
   return (
     <div className={cn("flex flex-col gap-6", className)} {...props}>
+      <div className="flex justify-center mb-2">
+        <ShamiriLogo />
+      </div>
       <Card>
         <CardHeader>
           <CardTitle className="text-2xl">Login</CardTitle>
