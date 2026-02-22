@@ -47,7 +47,7 @@ export default function MyFellowsPage() {
 
 async function MyFellowsPageContent() {
   const isSupervisor = await isCurrentUserSupervisor();
-  if (!isSupervisor) redirect("/dashboard");
+  if (!isSupervisor) redirect("/");
 
   const userId = await getCurrentUserId();
   if (!userId) redirect("/auth/login");

@@ -29,7 +29,7 @@ export default function Page() {
                 confirm your account.
               </p>
               <Button asChild className="mt-4 w-full">
-                <Link href="/dashboard">Go to dashboard</Link>
+                <Link href="/">Go to dashboard</Link>
               </Button>
             </CardContent>
           </Card>

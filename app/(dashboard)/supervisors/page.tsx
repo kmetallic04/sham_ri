@@ -23,7 +23,7 @@ export default function SupervisorsPage() {
 
 async function SupervisorsPageContent() {
   const isAdmin = await isCurrentUserAdmin();
-  if (!isAdmin) redirect("/dashboard");
+  if (!isAdmin) redirect("/");
 
   return (
     <div className="flex flex-col gap-6">

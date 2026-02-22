@@ -39,7 +39,7 @@ export function LoginForm({
         password,
       });
       if (error) throw error;
-      router.push("/dashboard");
+      router.push("/");
     } catch (error: unknown) {
       setError(error instanceof Error ? error.message : "An error occurred");
     } finally {
@@ -108,6 +108,17 @@ export function LoginForm({
           </form>
         </CardContent>
       </Card>
+      <div className="rounded-lg border bg-muted/50 px-4 py-3 text-sm text-muted-foreground">
+        <p className="font-medium text-foreground mb-2">Demo accounts</p>
+        <ul className="space-y-1">
+          <li>
+            <strong>Admin:</strong> admin@shamiri — password is the same (admin@shamiri.com)
+          </li>
+          <li>
+            <strong>Supervisor:</strong> jake@shamiri.com — password is the same (jake@shamiri.com)
+          </li>
+        </ul>
+      </div>
     </div>
   );
 }

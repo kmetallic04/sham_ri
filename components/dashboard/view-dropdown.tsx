@@ -7,11 +7,11 @@ import { usePathname } from "next/navigation";
 
 export function HomeNavButton() {
   const pathname = usePathname();
-  const isActive = pathname === "/dashboard";
+  const isActive = pathname === "/";
 
   return (
     <Button asChild variant={isActive ? "default" : "secondary"} size="sm">
-      <Link href="/dashboard">
+      <Link href="/">
         <House className="h-4 w-4" />
         Home
       </Link>
@@ -27,11 +27,11 @@ export function AdminViewButtons() {
       <Button
         asChild
         variant={
-          pathname.startsWith("/dashboard/supervisors") ? "default" : "secondary"
+          pathname.startsWith("/supervisors") ? "default" : "secondary"
         }
         size="sm"
       >
-        <Link href="/dashboard/supervisors">
+        <Link href="/supervisors">
           <Users className="h-4 w-4" />
           Supervisors
         </Link>
@@ -39,11 +39,11 @@ export function AdminViewButtons() {
       <Button
         asChild
         variant={
-          pathname.startsWith("/dashboard/fellows") ? "default" : "secondary"
+          pathname.startsWith("/fellows") ? "default" : "secondary"
         }
         size="sm"
       >
-        <Link href="/dashboard/fellows">
+        <Link href="/fellows">
           <UserCheck className="h-4 w-4" />
           Fellows
         </Link>
@@ -51,11 +51,11 @@ export function AdminViewButtons() {
       <Button
         asChild
         variant={
-          pathname.startsWith("/dashboard/groups") ? "default" : "secondary"
+          pathname.startsWith("/groups") ? "default" : "secondary"
         }
         size="sm"
       >
-        <Link href="/dashboard/groups">
+        <Link href="/groups">
           <Layers className="h-4 w-4" />
           Groups
         </Link>
@@ -72,11 +72,11 @@ export function SupervisorViewButtons() {
       <Button
         asChild
         variant={
-          pathname.startsWith("/dashboard/my-fellows") ? "default" : "secondary"
+          pathname.startsWith("/my-fellows") ? "default" : "secondary"
         }
         size="sm"
       >
-        <Link href="/dashboard/my-fellows">
+        <Link href="/my-fellows">
           <UserCheck className="h-4 w-4" />
           My Fellows
         </Link>
